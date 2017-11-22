@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <h1>{{ city.name }} רשימת שכונות</h1>
+    {% if neighborhood_list %}
+    <ul>
+        {% for neighborhood in neighborhood_list %}
+        <li>
+            <a href = "{{ neighborhood.get_absolute_url }}"> {{ neighborhood.neighborhood }} </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>אין כרגע שכונות בבסיס הנתונים</p>
+    {% endif %}
+{% endblock %}    

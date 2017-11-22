@@ -1,0 +1,11 @@
+{% extends "base_generic.html"%}
+{% block content %}
+    <h1> Real Estate Home</h1>
+    <p>Welcome to <em>Real Estate</em> ,a very basic Django website I developed</p>
+    <h2>Dinamic Content</h2>
+    <p>Numbers of cities and neighborhoods in our database:</p>
+    <ul>
+        <li><strong>Cities:</strong>{{ cities_num }}</li>
+        <li><strong>Neighborhoods:</strong>{{ neighborhoods_num }}</li>
+    </ul>
+{% endblock %}    

@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <h1>City:{{ city.name }} Neighborhood List</h1>
+    {% if neighborhood_list %}
+    <ul>
+        {% for neighborhood in neighborhood_list %}
+        <li>
+            <a href = "{{ neighborhood.get_absolute_url }}"> {{ neighborhood.neighborhood }} </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>There there is no data about this city neighborhoods.</p>
+    {% endif %}
+{% endblock %}    

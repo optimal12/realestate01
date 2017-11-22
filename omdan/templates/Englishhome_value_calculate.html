@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Home Price Estimation</h1>
+<p>Enter all the fields and submit.The estimation will be e-mailed to you.</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+    {{ form }}
+    </table>
+    <input type = "submit" value="Submit"/>
+</form>
+{% endblock %}
+  

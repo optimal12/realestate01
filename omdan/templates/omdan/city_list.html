@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <h1>רשימת ישובים</h1>
+    {% if city_list %}
+    <ul>
+        {% for city in city_list %}
+        <li>
+            <a href =""> {{ city.city }} </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>אין כרגע ישובים בבסיס הנתונים</p>
+    {% endif %}
+{% endblock %}    
